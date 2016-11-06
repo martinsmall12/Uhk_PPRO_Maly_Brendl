@@ -27,7 +27,7 @@ public class UserController {
    * @param name User's name
    * @return A string describing if the user is succesfully created or not.
    */
-  @RequestMapping("/create")
+  @RequestMapping("/user/create")
   @ResponseBody
   public String create(String email, String name) {
     User user = null;
@@ -47,7 +47,7 @@ public class UserController {
    * @param id The id of the user to delete
    * @return A string describing if the user is succesfully deleted or not.
    */
-  @RequestMapping("/delete")
+  @RequestMapping("/user/delete")
   @ResponseBody
   public String delete(long id) {
     try {
@@ -66,7 +66,7 @@ public class UserController {
    * @param email The email to search in the database.
    * @return The user id or a message error if the user is not found.
    */
-  @RequestMapping("/get-by-email")
+  @RequestMapping("/user/get-by-email")
   @ResponseBody
   public String getByEmail(String email) {
     String userId;
@@ -89,7 +89,7 @@ public class UserController {
    * @param name The new name.
    * @return A string describing if the user is succesfully updated or not.
    */
-  @RequestMapping("/update")
+  @RequestMapping("/user/update")
   @ResponseBody
   public String updateUser(long id, String email, String name) {
     try {
